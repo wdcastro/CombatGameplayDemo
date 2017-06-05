@@ -2,6 +2,7 @@ package gamecomponents;
 
 import java.util.ArrayList;
 
+import screens.Combat;
 import screens.Cutscene;
 import screens.World;
 import core.GameStage;
@@ -21,7 +22,7 @@ public class GameLogic {
 		System.out.println("Loading chapter "+ chapter);
 		System.out.println("-------------------------------");
 		switch(chapter){
-		case 0:
+		/*case 0:
 			playlist.clear();
 			playlist.add("kwartetjaponski.mp3"); 
 			playlist.add("fieldforce.mp3"); 
@@ -40,13 +41,14 @@ public class GameLogic {
 			
 			GameStage.setGameStage(chapter1map);
 			break;
+			*/
 		default:
 			playlist.clear();
 			playlist.add("fieldforce.mp3"); 
 			PlaylistManager.loadPlaylist(playlist);
 			
-			World defaultWorld = new World("MANSION","res/world/CHAPTER1MANSION.txt");
-			GameStage.setGameStage(defaultWorld);
+			Combat combat = new Combat();
+			GameStage.setGameStage(combat);
 			break;
 		}
 	}

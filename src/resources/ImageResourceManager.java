@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 public class ImageResourceManager {
 	
 	static Hashtable<String, String> images = new Hashtable<String, String>();
-	public final static String resourceLocation = "res/resourcemanagerfiles/IMAGES.resource";
 
 	public ImageResourceManager(){
 	}
